@@ -22,7 +22,7 @@ const Post = ({ post }: Props) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<IFormInput>();
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
     await fetch("/api/createComment", {
@@ -95,6 +95,7 @@ const Post = ({ post }: Props) => {
             <input
               {...register("name", { required: true })}
               type="text"
+              name="name"
               placeholder="John Appleseed"
               className="shadow border rounded py-2
           px-3 form-input mt-1 block w-full ring-blue-700 outline-none focus:ring"
@@ -105,7 +106,8 @@ const Post = ({ post }: Props) => {
             <span className="text-gray-700">Email</span>
             <input
               {...register("email", { required: true })}
-              type="text"
+              type="email"
+              name="email"
               placeholder="JohnAppleseed@email.com"
               className="shadow border rounded py-2
           px-3 form-input mt-1 block w-full ring-blue-700 outline-none focus:ring"
@@ -117,6 +119,7 @@ const Post = ({ post }: Props) => {
             <textarea
               {...register("comment", { required: true })}
               rows={8}
+              name="comment"
               placeholder="type your comment here"
               className="shadow border rounded py-2 px-3
            form-textarea mt-1 w-full ring-blue-700 outline-none focus:ring"
