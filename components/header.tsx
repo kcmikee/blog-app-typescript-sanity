@@ -19,8 +19,8 @@ function Header() {
         </div>
       </div>
       <div className="flex items-center space-x-5 text-green-600 cursor-pointer">
-        <h3>Sign In</h3>
-        <h3 className="border px-2 py-2 rounded-full border-full cursor-pointer">Get Started</h3>
+        <h3>Log In</h3>
+        <h3 className="border px-4 py-2 rounded-full border-full cursor-pointer">Sign In</h3>
       </div>
     </header>
   );
