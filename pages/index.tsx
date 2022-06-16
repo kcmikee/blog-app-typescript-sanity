@@ -12,18 +12,18 @@ const Home = ({ posts }: Props) => {
   return (
     <div className="max-w-6xl mx-auto">
       <Head>
-        <title>ZoroBlog | Zoropay</title>
+        <title>M-blog|Esenwa</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       {/* banner */}
       <div
-        className="flex items-center justify-between text-white bg-blue-700
+        className="flex items-center justify-between text-black bg-blue-700
          border-y border-black py-10 z-10 lg:py-0">
         <div className="px-10 space-y-5">
           <h1 className="text-6xl max-w-xl font-serif">
             {" "}
-            <span className="underline decoration-white decoration-4">Medium</span> is a place to
+            <span className="underline decoration-black decoration-4">Medium</span> is a place to
             write, read and connect
           </h1>
           <h2>

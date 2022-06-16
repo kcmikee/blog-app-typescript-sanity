@@ -5,6 +5,7 @@ import { Post } from "../../typing";
 import PortableText from "react-portable-text";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
+import moment from "moment";
 
 interface Props {
   post: Post;
@@ -53,7 +54,7 @@ const Post = ({ post }: Props) => {
           />
           <p className="font-extralight text-sm">
             Blog post by <span className="text-green-600">{post.author.name}</span> - Published at{" "}
-            {new Date(post._createdAt).toLocaleDateString()}
+            {moment(post._createdAt).format("ll")}
           </p>
         </div>
         <div>
